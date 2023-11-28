@@ -15,3 +15,9 @@ main:
     move $t0, $v0
     bgt $t0, 24, exit
     li $v0, 4
+    la $a0, error_message
+    syscall
+    j main
+
+exit:
+    move $a0, $v0
