@@ -54,3 +54,9 @@ else:
     li $v0, 4
     la $a0, add_space
     syscall
+
+loop:
+    beq $t5, $t4, done
+    add $t0, $t1, $t2
+    add $t1, $zero, $t2
+    add $t2, $zero, $t0
