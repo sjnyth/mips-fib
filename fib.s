@@ -6,6 +6,12 @@
 
 .text
 main:
-    li $v0, 4
-    la $a0, input
+    li $v0, 4   # calls prompt to take an input integer
+    la $a0, input  # loads address and puts the interger value in register $a0
+    syscall  
+
+    li $v0, 5  
     syscall
+    move $t0, $v0
+    bgt $t0, 24, exit
+    li $v0, 4
