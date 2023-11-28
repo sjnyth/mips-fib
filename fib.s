@@ -68,3 +68,7 @@ loop:
     syscall
     addi $t5, $t5, 1
     j loop
+
+done:
+    li $v0, 10
+    syscall
