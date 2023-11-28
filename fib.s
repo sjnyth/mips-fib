@@ -65,3 +65,6 @@ loop:
     syscall
     li $v0, 4
     la $a0, add_space
+    syscall
+    addi $t5, $t5, 1
+    j loop
