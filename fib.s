@@ -60,3 +60,8 @@ loop:
     add $t0, $t1, $t2
     add $t1, $zero, $t2
     add $t2, $zero, $t0
+    li $v0, 1
+    move $a0, $t0
+    syscall
+    li $v0, 4
+    la $a0, add_space
