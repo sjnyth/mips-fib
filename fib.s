@@ -4,3 +4,8 @@
     error_message: .asciiz "Number is less than 25! Please enter again\n"
     add_space: .asciiz "  "
 
+.text
+main:
+    li $v0, 4
+    la $a0, input
+    syscall
