@@ -33,3 +33,9 @@ fib:
 
     li $t5, 0
     beq $t3, 0, done
+    bne $t3, 1, else
+
+else:
+    li $v0, 1
+    move $a0, $t0
+    syscall
